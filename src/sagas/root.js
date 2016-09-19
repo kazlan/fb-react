@@ -1,5 +1,10 @@
 
+import watchFacebookSagas from './facebook'
+
 export function* rootSaga(){
-    yield console.log("No saga defined yet.")
+    yield [
+         console.log("Defining sagas..."),
+         watchFacebookSagas
+    ]
 }
     

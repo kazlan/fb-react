@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { displayMessage } from './actions'
+import { displayMessage, fetchPages } from './actions'
 import logo from './logo.svg'
 import './App.css'
 
@@ -9,6 +9,7 @@ class App extends Component {
   componentDidMount(){
     const { dispatch } = this.props
     dispatch(displayMessage("All your Reducers are belong to us..."))
+    dispatch(fetchPages("lala"))
   }
   render() {
     return (
